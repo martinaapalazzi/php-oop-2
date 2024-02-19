@@ -7,13 +7,14 @@ class Category extends Product {
         $this->nameCategory = $nameCategory;
     }
 };
+
 class Product {
     public $title;
     public $photo;
     public $price;
     public $category;
 
-    public function __construct (string $title, $photo, $price, Category $category )
+    public function __construct (string $title, $photo, $price, Category $category)
     {
         $this->title = $title;
         $this->photo = $photo;
