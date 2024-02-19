@@ -2,5 +2,11 @@
 require __DIR__. ('/productClass.php');
 
 class Category extends Product {
-    public $name;
+    public $nameCategory;
+
+    public function __construct($title, $photo, $price, $nameCategory)
+    {
+        parent::__construct($title, $photo, $price);
+        $this->nameCategory = $nameCategory;
+    }
 }
