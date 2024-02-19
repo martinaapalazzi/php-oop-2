@@ -1,6 +1,6 @@
 <?php
 require __DIR__. ('/productClass.php');
 
-class Category {
+class Category extends Product {
     public $name;
 }
