@@ -7,7 +7,8 @@ require __DIR__.('/sleepingbagsClass.php');
 $productChickeNuggets = new Food ('Chicken nuggets', 'img/percorso/nuggets', '5£', new Category('Food'), 'Meat');
 var_dump($productChickeNuggets);
 
-echo '<div> Title: '.$productChickeNuggets->title.'</div>'.
+echo '<h2> Card 1 </h2>'.
+'<div> Title: '.$productChickeNuggets->title.'</div>'.
 '<br>'.
 '<div> Photo: '.$productChickeNuggets->photo.'</div>'.
 '<br>'.
@@ -18,7 +19,8 @@ echo '<div> Title: '.$productChickeNuggets->title.'</div>'.
 $productBall = new Toys ('Ball', 'img/percorso/ball', '8£', new Category('Toys'), 'Plastic');
 var_dump($productBall);
 
-echo '<div> Title: '.$productBall->title.'</div>'.
+echo '<h2> Card 2 </h2>'.
+'<div> Title: '.$productBall->title.'</div>'.
 '<br>'.
 '<div> Photo: '.$productBall->photo.'</div>'.
 '<br>'.
@@ -29,7 +31,8 @@ echo '<div> Title: '.$productBall->title.'</div>'.
 $productDogBed = new Sleepingbags ('Dog bed', 'img/percorso/dogbed', '25£', new Category('Pets beds'), 'Square', 'Small');
 var_dump($productDogBed);
 
-echo '<div> Title: '.$productDogBed->title.'</div>'.
+echo '<h2> Card 3 </h2>'.
+'<div> Title: '.$productDogBed->title.'</div>'.
 '<br>'.
 '<div> Photo: '.$productDogBed->photo.'</div>'.
 '<br>'.
