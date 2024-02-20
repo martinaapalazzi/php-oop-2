@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__.('/traits/hasDescription.php');
-class Category extends Product {
+class Category //extends Product 
+{
     public $nameCategory;
 
     public function __construct($nameCategory)
@@ -21,9 +22,14 @@ class Product {
     {
         $this->title = $title;
         $this->photo = $photo;
-        $this->price = $price;
+        if (is_numeric($price)) {
+            $this->price = $price;
+        }
+        else {
+            throw new Exception('Value is not valid, it is NOT a number');
+        }
         $this->setCategory($category);
-        $this->$description;
+        $this->description = $description;
     }
 
     public function getCategory() {

@@ -9,16 +9,32 @@ $catsCategory = new Category('Cats');
 
 $allProductsArray = [];
 
-$productChickeNuggets = new Food ('Chicken nuggets', 'img/chicken-nugget-dog.png', '5£', $dogsCategory, 'Tasty chicken nuggets', 'Meat');
-$allProductsArray[] = $productChickeNuggets;
+try {
+    $productChickeNuggets = new Food ('Chicken nuggets', 'img/chicken-nugget-dog.png', 5.50, $dogsCategory, 'Tasty chicken nuggets.', 'Meat');
+    $allProductsArray[] = $productChickeNuggets;
+}
+catch (Exception $e) {
+    echo '<h4 style="color: red;">Valore quantità prodotto generico non valido!</h4>';
+}
+
+try {
+    $productBall = new Toys ('Ball', 'img/cat-ball.png', 8.59, $catsCategory, 'Lovely ball to play with.', 'Plastic');
+    $allProductsArray[] = $productBall;
+}
+
+catch (Exception $e) {
+    echo '<h4 style="color: red;">Valore quantità prodotto generico non valido!</h4>';
+}
+
+try {
+    $productDogBed = new Sleepingbags ('Dog bed', 'img/dog-bed.png', 25.99, new Category('Dog'), 'Confy and fluffy dog bed.', 'Square', 'Small');
+    $allProductsArray[] = $productDogBed;
+}
 
 
-$productBall = new Toys ('Ball', 'img/cat-ball.png', '8£', $catsCategory, 'Lovely ball to play with', 'Plastic');
-$allProductsArray[] = $productBall;
-
-
-$productDogBed = new Sleepingbags ('Dog bed', 'img/dog-bed.png', '25£', $dogsCategory, 'Confy and fluffy dog bed', 'Square', 'Small');
-$allProductsArray[] = $productDogBed;
+catch (Exception $e) {
+    echo '<h4 style="color: red;">Valore quantità prodotto generico non valido!</h4>';
+}
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +66,7 @@ $allProductsArray[] = $productDogBed;
             <div class="row">
                 <div class="col-12">
                     <h2>
-                        Prodotti
+                        Prodotti:
                     </h2>
                 </div>
                 <?php
@@ -69,7 +85,7 @@ $allProductsArray[] = $productDogBed;
                             <p class="card-text">
                                 <div>
                                     <?php
-                                        echo '<div>Price: '.$singleProduct->price.'</div>';
+                                        echo '<div>Price: £'.$singleProduct->price.'</div>';
                                     ?>
                                 </div>
                                 <div>
