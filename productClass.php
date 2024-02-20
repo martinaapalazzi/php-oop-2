@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__.('/traits/hasDescription.php');
 class Category extends Product {
     public $nameCategory;
 
@@ -14,12 +15,15 @@ class Product {
     public $price = null;
     public $category = null;
 
-    public function __construct (string $title, $photo, $price, Category $category)
+    use HasDescription;
+
+    public function __construct (string $title, $photo, $price, Category $category, $description)
     {
         $this->title = $title;
         $this->photo = $photo;
         $this->price = $price;
         $this->setCategory($category);
+        $this->$description;
     }
 
     public function getCategory() {

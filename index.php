@@ -9,57 +9,16 @@ $catsCategory = new Category('Cats');
 
 $allProductsArray = [];
 
-$productChickeNuggets = new Food ('Chicken nuggets', 'img/chicken-nugget-dog.png', '5£', $dogsCategory, 'Meat');
+$productChickeNuggets = new Food ('Chicken nuggets', 'img/chicken-nugget-dog.png', '5£', $dogsCategory, 'Tasty chicken nuggets', 'Meat');
 $allProductsArray[] = $productChickeNuggets;
 
 
-$productBall = new Toys ('Ball', 'img/cat-ball.png', '8£', $catsCategory, 'Plastic');
+$productBall = new Toys ('Ball', 'img/cat-ball.png', '8£', $catsCategory, 'Lovely ball to play with', 'Plastic');
 $allProductsArray[] = $productBall;
 
 
-$productDogBed = new Sleepingbags ('Dog bed', 'img/dog-bed.png', '25£', $dogsCategory, 'Square', 'Small');
+$productDogBed = new Sleepingbags ('Dog bed', 'img/dog-bed.png', '25£', $dogsCategory, 'Confy and fluffy dog bed', 'Square', 'Small');
 $allProductsArray[] = $productDogBed;
-
-/*
-$productChickeNuggets = new Food ('Chicken nuggets', 'img/percorso/nuggets', '5£', new Category('Dogs'), 'Meat');
-//var_dump($productChickeNuggets);
-
-echo '<h2> Card 1 </h2>'.
-'<div> Title: '.$productChickeNuggets->title.'</div>'.
-'<br>'.
-'<div> Photo: '.$productChickeNuggets->photo.'</div>'.
-'<br>'.
-'<div>Price: '.$productChickeNuggets->price.'</div>'.
-'<br>'.
-'<div> Category: '.$productChickeNuggets->getCategory()->nameCategory.'</div>'.
-'<br>';
-
-$productBall = new Toys ('Ball', 'img/percorso/ball', '8£', new Category('Cats'), 'Plastic');
-//var_dump($productBall);
-
-echo '<h2> Card 2 </h2>'.
-'<div> Title: '.$productBall->title.'</div>'.
-'<br>'.
-'<div> Photo: '.$productBall->photo.'</div>'.
-'<br>'.
-'<div>Price: '.$productBall->price.'</div>'.
-'<br>'.
-'<div> Category: '.$productBall->getCategory()->nameCategory.'</div>'.
-'<br>';
-
-$productDogBed = new Sleepingbags ('Dog bed', 'img/percorso/dogbed', '25£', new Category('Dogs'), 'Square', 'Small');
-//var_dump($productDogBed);
-
-echo '<h2> Card 3 </h2>'.
-'<div> Title: '.$productDogBed->title.'</div>'.
-'<br>'.
-'<div> Photo: '.$productDogBed->photo.'</div>'.
-'<br>'.
-'<div>Price: '.$productDogBed->price.'</div>'.
-'<br>'.
-'<div> Category: '.$productDogBed->getCategory()->nameCategory.'</div>'.
-'<br>';
-*/
 ?>
 
 <!DOCTYPE html>
@@ -148,6 +107,11 @@ echo '<h2> Card 3 </h2>'.
                                 <?php
                                     }
                                 ?>
+                                <div>
+                                    <?php
+                                        echo '<div> Description: '.$singleProduct->description.'</div>';
+                                    ?>
+                                </div>
                             </p>
                         </div>
                     </div>
