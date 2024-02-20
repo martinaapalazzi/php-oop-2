@@ -9,10 +9,10 @@ class Category extends Product {
 };
 
 class Product {
-    public $title;
-    public $photo;
-    public $price;
-    public $category;
+    public $title = null;
+    public $photo = null;
+    public $price = null;
+    public $category = null;
 
     public function __construct (string $title, $photo, $price, Category $category)
     {
