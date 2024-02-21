@@ -10,7 +10,7 @@ $catsCategory = new Category('Cats');
 $allProductsArray = [];
 
 try {
-    $productChickeNuggets = new Food ('Chicken nuggets', 'img/chicken-nugget-dog.png', 5.50, $dogsCategory, 'Tasty chicken nuggets.', 'Meat');
+    $productChickeNuggets = new Food ('Chicken nuggets', 'img/chicken-nugget-dog.png', 5.51, $dogsCategory, 'Tasty chicken nuggets.', 'Meat');
     $allProductsArray[] = $productChickeNuggets;
 }
 catch (Exception $e) {
